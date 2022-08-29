@@ -111,8 +111,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 46caf678dd4d24c5c85eafc038ab4512, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _RestartTxT: {fileID: 0}
-  _PlayerState: 1
+  RestartTxT: {fileID: 0}
+  PlayerColor: 1
 --- !u!54 &967013136758114887
 Rigidbody:
   m_ObjectHideFlags: 0
