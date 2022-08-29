@@ -17,9 +17,8 @@ public class BallCreator : MonoBehaviour
         GameObject redBall = Instantiate(RedBall);
         GameObject blueBall = Instantiate(BlueBall);
 
-        Vector2 spawnPoint = new Vector3(3.5f, 3f);
-
-        redBall.transform.position = spawnPoint;
-        blueBall.transform.position = spawnPoint * new Vector2(-1f, 1f);
+        Vector2 spawnPoisition = new Vector3(3.5f, 3f);
+        redBall.transform.position = spawnPoisition;
+        blueBall.transform.position = spawnPoisition * new Vector2(-1f, 1f);
     }
 }
