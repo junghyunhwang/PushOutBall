@@ -42,8 +42,9 @@ public class RedBall : PlayerBall
             DrectionZ = 0.0f;
         }
 
-        MoveDrection = new Vector3(DrectionX, 0.0f, DrectionZ);
-
+        MoveDrection.x = DrectionX;
+        MoveDrection.z = DrectionZ;
+        
         Rb.AddForce(MoveDrection, ForceMode.Force);
     }
 }

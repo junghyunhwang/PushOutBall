@@ -6,9 +6,9 @@ public class Restart : MonoBehaviour
 {
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.R))
+        if (Input.anyKey)
         {
-            UnityEngine.SceneManagement.SceneManager.LoadScene("GameScene");
+            gameObject.SetActive(false);
         }
     }
 }
