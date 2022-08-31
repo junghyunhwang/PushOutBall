@@ -27,10 +27,10 @@ public abstract class PlayerBall : MonoBehaviour
         }
     }
 
+    public abstract void MoveBall();
+
     private void OnDisable()
     {
         UnityEngine.SceneManagement.SceneManager.LoadScene("GameScene");
     }
-
-    public abstract void MoveBall();
 }

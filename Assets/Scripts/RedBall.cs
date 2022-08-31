@@ -4,11 +4,6 @@ using UnityEngine;
 
 public class RedBall : PlayerBall
 {
-    public RedBall()
-    {
-        Debug.Log("Create Red Ball");
-    }
-
     private void FixedUpdate()
     {
         MoveBall();

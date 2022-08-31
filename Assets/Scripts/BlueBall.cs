@@ -4,11 +4,6 @@ using UnityEngine;
 
 public class BlueBall : PlayerBall
 {
-    public BlueBall()
-    {
-        Debug.Log("Create Blue Ball");
-    }
-
     private void FixedUpdate()
     {
         MoveBall();
