@@ -4,14 +4,15 @@ using UnityEngine;
 
 public abstract class PlayerBall : MonoBehaviour
 {
+    private const float COLLISION_WEIGHT = 7.5f;
+
     protected Rigidbody Rb;
-    protected Vector3 MoveDrection = Vector3.zero;
-    protected float DrectionX = 0.0f;
-    protected float DrectionZ = 0.0f;
+    protected Vector3 Force;
 
     void Start()
     {
         Rb = GetComponent<Rigidbody>();
+        Force = Vector3.zero;
     }
 
     void Update()
@@ -21,13 +22,21 @@ public abstract class PlayerBall : MonoBehaviour
             Rb.useGravity = true;
         }
 
-        if (transform.position.y < -5)
+        if (transform.position.y < -5.0f)
         {
             Destroy(gameObject);
         }
     }
 
     public abstract void MoveBall();
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        Force.x = collision.relativeVelocity.x * COLLISION_WEIGHT;
+        Force.z = collision.relativeVelocity.z * COLLISION_WEIGHT;
+
+        Rb.AddForce(Force);
+    }
 
     private void OnDisable()
     {

@@ -13,33 +13,30 @@ public class RedBall : PlayerBall
     {
         if (Input.GetKey(KeyCode.RightArrow))
         {
-            DrectionX = 1f;
+            Force.x = 1f;
         }
         else if (Input.GetKey(KeyCode.LeftArrow))
         {
-            DrectionX = -1f;
+            Force.x = -1f;
         }
         else
         {
-            DrectionX = 0.0f;
+            Force.x = 0.0f;
         }
 
         if (Input.GetKey(KeyCode.UpArrow))
         {
-            DrectionZ = 1f;
+            Force.z = 1f;
         }
         else if (Input.GetKey(KeyCode.DownArrow))
         {
-            DrectionZ = -1f;
+            Force.z = -1f;
         }
         else
         {
-            DrectionZ = 0.0f;
+            Force.z = 0.0f;
         }
-
-        MoveDrection.x = DrectionX;
-        MoveDrection.z = DrectionZ;
         
-        Rb.AddForce(MoveDrection, ForceMode.Force);
+        Rb.AddForce(Force, ForceMode.Force);
     }
 }
